@@ -10,6 +10,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import ComplaintAccordion from "../components/ComplaintAccordion";
+import { API_URL } from "../Constants";
 
 ChartJS.register(
   CategoryScale,
@@ -31,18 +32,18 @@ const PolicyHome = () => {
   const [activeTab, setActiveTab] = useState("vis");
 
   const getComplaints = async () => {
-    const res = await fetch("http://localhost:3000/complaints");
+    const res = await fetch(`${API_URL}/complaints`);
     const data = await res.json();
     setComplaints(data);
   };
   const getSummary = async () => {
-    const res = await fetch("http://localhost:3000/summary");
+    const res = await fetch(`${API_URL}/summary`);
     const data = await res.json();
     setSummary(data.summary);
   };
 
   const getAnalytics = async () => {
-    const res = await fetch("http://localhost:3000/analytics");
+    const res = await fetch(`${API_URL}/analytics`);
     const data = await res.json();
     const concerns = data.map((item) => item.concern);
     const values = data.map((item) => item.count);

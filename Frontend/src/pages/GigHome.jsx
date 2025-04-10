@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import ComplaintAccordion from "../components/ComplaintAccordion";
+import { API_URL } from "../Constants";
 
 const GigHome = () => {
   const [activeTab, setActiveTab] = useState("all");
   const [complaints, setComplaints] = useState([]);
   const getData = async () => {
-    const res = await fetch("http://localhost:3000/complaints");
+    const res = await fetch(`${API_URL}/complaints`);
     const data = await res.json();
     setComplaints(data);
   };

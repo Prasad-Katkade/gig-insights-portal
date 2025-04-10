@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <div className=" w-full min-h-screen p-4 grid grid-cols-12">
-        <div className="col-span-6  p-12 flex flex-col justify-center">
+        <div className="sm:col-span-12 col-span-6  p-12 flex flex-col justify-center">
           <p className="text-[40px] text-center">
             Your Voice, Our AI <br /> Empowering Gig Workers
           </p>
