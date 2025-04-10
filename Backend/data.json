@@ -1,0 +1,207 @@
+[
+  {
+    "name": "John D.",
+    "complaintTitle": "The commission rates are too high, leaving us with very little earnings.",
+    "desc": "The new commission structure introduced by the company has made it nearly impossible to make a decent living. We're giving away more than half of what we earn per ride just to cover their fees. After paying for gas, maintenance, and insurance, there’s barely any profit left. It feels like the company is taking advantage of us.",
+    "location": "New York, NY",
+    "date": "2025-02-15"
+  },
+  {
+    "name": "Sarah T.",
+    "complaintTitle": "Unfair deactivation without clear reasons.",
+    "desc": "I’ve been driving for this company for years, and suddenly my account was deactivated without any clear explanation. There was no prior warning or opportunity to defend myself. I rely on this job to support my family, and now I’m left with no income. They need to be more transparent with their policies and provide proper reasoning for deactivations.",
+    "location": "Chicago, IL",
+    "date": "2025-02-16"
+  },
+  {
+    "name": "Michael B.",
+    "complaintTitle": "Unsafe conditions for drivers due to insufficient background checks.",
+    "desc": "The company doesn’t seem to care about the safety of its drivers. I’ve had multiple encounters with passengers who made me feel unsafe, and when I reported these incidents, no action was taken. It’s frustrating knowing that anyone can get into a car without a thorough background check. Drivers need better protection.",
+    "location": "Los Angeles, CA",
+    "date": "2025-02-17"
+  },
+  {
+    "name": "Raj P.",
+    "complaintTitle": "Constant app malfunctions affect earnings.",
+    "desc": "The app frequently crashes or shows incorrect pick-up locations, leading to lost rides and wasted time. I end up driving around for longer than necessary, with no compensation for the extra miles. The company needs to fix these technical issues because they directly impact our earnings.",
+    "location": "San Francisco, CA",
+    "date": "2025-02-18"
+  },
+  {
+    "name": "Emma W.",
+    "complaintTitle": "Long hours and low earnings make it hard to stay afloat.",
+    "desc": "The company’s payout system doesn’t reflect the effort we put in. I’m working long hours, sometimes up to 12 hours a day, but my earnings barely cover my expenses. Even though I’m constantly driving, the incentives are too low, and the fares are often unpredictable.",
+    "location": "Miami, FL",
+    "date": "2025-02-19"
+  },
+  {
+    "name": "David L.",
+    "complaintTitle": "Unreliable support when issues arise.",
+    "desc": "When I encounter problems with the app or passengers, the support team is slow to respond and rarely offers effective solutions. I’ve had to deal with issues for days without getting any help, which makes it even harder to work in a stressful environment. This needs to change, as we rely on fast responses to keep the job running smoothly.",
+    "location": "Houston, TX",
+    "date": "2025-02-20"
+  },
+  {
+    "name": "Olivia H.",
+    "complaintTitle": "Fuel prices are rising, but fares stay the same.",
+    "desc": "The rising cost of fuel is eating into my already low earnings, but the company refuses to adjust the fare prices accordingly. I’m driving more miles and spending more on fuel, but my take-home pay is stagnating. The company needs to raise the rates to reflect the current market conditions.",
+    "location": "Boston, MA",
+    "date": "2025-02-21"
+  },
+  {
+    "name": "Carlos J.",
+    "complaintTitle": "Unfair rating system penalizes drivers.",
+    "desc": "The rating system is biased. Even if I drive safely and provide good service, passengers can still give a low rating for reasons that are out of my control. It affects my earnings, and I’ve seen drivers with perfect records getting unfairly penalized. There needs to be a better system that accounts for real issues.",
+    "location": "Dallas, TX",
+    "date": "2025-02-22"
+  },
+  {
+    "name": "Tanya M.",
+    "complaintTitle": "The company's cancellation policy is one-sided.",
+    "desc": "The company’s cancellation policy heavily favors passengers. If a rider cancels after I’ve already arrived at the pick-up location, I lose both time and money. However, when I need to cancel a ride for safety or other reasons, I’m penalized. There needs to be a fairer policy that doesn’t leave drivers at a disadvantage.",
+    "location": "Phoenix, AZ",
+    "date": "2025-02-23"
+  },
+
+  {
+    "name": "James K.",
+    "complaintTitle": "Driver incentives are too low and rarely offered.",
+    "desc": "The incentives provided by the company are minimal and almost never offered. Even when working long hours or during peak times, the additional earnings promised in the app are rarely given. It feels like the company isn't invested in supporting its drivers. I need better compensation for my time and effort.",
+    "location": "Atlanta, GA",
+    "date": "2025-02-24"
+  },
+  {
+    "name": "Linda C.",
+    "complaintTitle": "Company policies make it difficult to reach support.",
+    "desc": "When I face issues, like a problem with a ride or app malfunction, the support team is nearly impossible to reach. The automated messages don't help, and getting to a real person takes too long. The lack of real customer service makes me feel abandoned.",
+    "location": "Seattle, WA",
+    "date": "2025-02-25"
+  },
+  {
+    "name": "Kenny L.",
+    "complaintTitle": "Frequent updates to the app cause more issues than they fix.",
+    "desc": "Every time the app gets an update, more problems seem to pop up. Features break down, or the navigation system becomes unreliable, causing delays and wrong drop-offs. These updates don’t seem to improve the experience for drivers, and instead, they complicate things further.",
+    "location": "Denver, CO",
+    "date": "2025-02-26"
+  },
+  {
+    "name": "Rachel F.",
+    "complaintTitle": "Constant fluctuations in surge pricing make earnings unpredictable.",
+    "desc": "Surge pricing used to be a good way to boost earnings, but now it fluctuates so much that it's unpredictable. Sometimes, there’s no surge when you’re in an area with a lot of riders, and at other times, the surge is too low to make a difference. It's frustrating to drive for hours and not know how much you’ll earn.",
+    "location": "Dallas, TX",
+    "date": "2025-02-27"
+  },
+  {
+    "name": "Tom G.",
+    "complaintTitle": "Unclear and inconsistent fare structure.",
+    "desc": "The company’s fare structure is confusing and inconsistent. Sometimes I get a fair amount for a ride, but other times, I’m driving for long distances and get paid next to nothing. It doesn’t seem like there's a clear, standard way to determine how much we earn for each trip.",
+    "location": "Phoenix, AZ",
+    "date": "2025-02-28"
+  },
+  {
+    "name": "Angela S.",
+    "complaintTitle": "Unpredictable and unfair customer ratings.",
+    "desc": "The rating system seems flawed. Sometimes I get rated poorly for reasons that are completely out of my control. Passengers leave bad ratings even though I provide great service, and it’s incredibly frustrating. It affects my overall rating and the potential to earn more money.",
+    "location": "Orlando, FL",
+    "date": "2025-03-01"
+  },
+  {
+    "name": "Brian T.",
+    "complaintTitle": "Driver support doesn’t offer meaningful solutions.",
+    "desc": "Whenever I reach out to driver support with an issue, the responses I get are generic and don’t solve the problem. They don’t take my specific situation into account, and it feels like they’re just trying to get rid of me. I need support that helps me directly with real solutions, not automated responses.",
+    "location": "San Diego, CA",
+    "date": "2025-03-02"
+  },
+  {
+    "name": "Sophia V.",
+    "complaintTitle": "Overcrowded pickup areas lead to long waiting times.",
+    "desc": "Pickup areas are often overcrowded, especially during peak hours, leading to long waiting times for both drivers and passengers. This issue results in lost time and money as we wait for passengers in heavy traffic or crowded spots. The company needs to address these areas to make the experience smoother for drivers.",
+    "location": "Washington, D.C.",
+    "date": "2025-03-03"
+  },
+  {
+    "name": "Nick H.",
+    "complaintTitle": "The company's cancellation fees are excessive.",
+    "desc": "The cancellation fees for passengers are way too low, which encourages people to cancel rides at the last minute. As a driver, I’m often left in an area with no compensation for the time and miles I spent on a cancelled ride. The company needs to increase cancellation fees to better support drivers.",
+    "location": "Boston, MA",
+    "date": "2025-03-04"
+  },
+  {
+    "name": "Catherine P.",
+    "complaintTitle": "High vehicle maintenance costs and no support for repairs.",
+    "desc": "Maintaining the vehicle is getting more expensive, but the company doesn’t provide any support for repairs or maintenance. The wear and tear from constant driving is taking a toll on my car, and there’s no compensation or assistance from the company. I feel like I’m expected to cover all the costs on my own.",
+    "location": "Austin, TX",
+    "date": "2025-03-05"
+  },
+
+  {
+    "name": "Joshua B.",
+    "complaintTitle": "Lack of clarity on bonus and incentive programs.",
+    "desc": "The company often advertises bonuses and incentives, but the rules are never clear. I’ve missed out on bonuses several times because the terms weren’t communicated properly, or I didn’t meet some hidden criteria. I would appreciate a transparent and clear system for how to earn these bonuses.",
+    "location": "Philadelphia, PA",
+    "date": "2025-03-06"
+  },
+  {
+    "name": "Patricia W.",
+    "complaintTitle": "Unfair ride cancellations by passengers.",
+    "desc": "I’ve had several passengers cancel rides after I’ve already arrived at the pick-up point. They should be penalized more for this, as it wastes both my time and money. I’m left with no compensation for these cancellations, and it feels like the company doesn’t care about protecting drivers.",
+    "location": "Minneapolis, MN",
+    "date": "2025-03-07"
+  },
+  {
+    "name": "Ethan R.",
+    "complaintTitle": "App navigation sometimes takes drivers on longer routes.",
+    "desc": "The app sometimes suggests longer routes, even though there’s a faster way to get to the destination. This causes unnecessary mileage and delays, reducing the amount I can earn in a shift. It would be great if the app could optimize routes better and be more accurate with directions.",
+    "location": "Atlanta, GA",
+    "date": "2025-03-08"
+  },
+  {
+    "name": "Isabel M.",
+    "complaintTitle": "The company's rating system is inconsistent.",
+    "desc": "I’ve received low ratings from passengers who I know I provided excellent service to, yet others give me high ratings for the same type of service. The rating system feels completely inconsistent, and it affects how much I earn. It would be much better if the company addressed this issue and helped maintain fairness.",
+    "location": "Las Vegas, NV",
+    "date": "2025-03-09"
+  },
+  {
+    "name": "Carlos G.",
+    "complaintTitle": "Fuel surcharge is not applied during peak hours.",
+    "desc": "The company used to apply a fuel surcharge during peak hours, but they’ve stopped doing that without any notice. The rising fuel prices are affecting my bottom line, and without that surcharge, it’s harder to cover expenses. The company needs to bring it back to help drivers during these times.",
+    "location": "San Antonio, TX",
+    "date": "2025-03-10"
+  },
+  {
+    "name": "Mia F.",
+    "complaintTitle": "Riders sometimes make unreasonable demands.",
+    "desc": "I've had passengers make unreasonable requests that are outside the scope of the service. Some ask to be driven off-route or request services that aren't allowed. When I try to explain, I get bad ratings, even though I’m just trying to follow the rules. The company should have clearer guidelines on what’s acceptable from passengers.",
+    "location": "Dallas, TX",
+    "date": "2025-03-11"
+  },
+  {
+    "name": "Nina P.",
+    "complaintTitle": "Inconsistent payment for long-distance trips.",
+    "desc": "I’ve taken long-distance trips that end up paying very little compared to the amount of time and miles I put in. The company’s pay structure for long-distance rides doesn’t seem to be adjusted properly for the amount of work involved. They should revise this to ensure drivers are compensated fairly for long trips.",
+    "location": "Phoenix, AZ",
+    "date": "2025-03-12"
+  },
+  {
+    "name": "Luis R.",
+    "complaintTitle": "Unreasonable penalties for late arrivals.",
+    "desc": "I’ve been penalized multiple times for arriving late at a pick-up location due to heavy traffic, which was out of my control. The company should consider these factors and not penalize drivers for situations beyond our control. They need to adjust their penalties or at least offer some flexibility for traffic delays.",
+    "location": "Miami, FL",
+    "date": "2025-03-13"
+  },
+  {
+    "name": "Olivia L.",
+    "complaintTitle": "App frequently logs out during a ride.",
+    "desc": "The app logs out randomly in the middle of a ride, causing major interruptions in navigation and communication with passengers. This has led to delays and frustrated passengers. The app needs to be more stable, especially when we're in the middle of a ride.",
+    "location": "New York, NY",
+    "date": "2025-03-14"
+  },
+  {
+    "name": "Zane C.",
+    "complaintTitle": "Lack of transparency in how fares are calculated.",
+    "desc": "I don’t understand how the fares are being calculated, especially when there’s a surge. Sometimes it doesn’t add up, and I end up with less than I expected. The company should be more transparent with its fare calculation process so drivers can understand how much they’ll earn before accepting rides.",
+    "location": "Chicago, IL",
+    "date": "2025-03-15"
+  }
+]
