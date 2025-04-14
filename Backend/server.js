@@ -3,6 +3,7 @@ import fs from "fs";
 import cors from "cors";
 import OpenAI from "openai";
 import dotenv from "dotenv";
+import session from "express-session";
 
 dotenv.config();
 
@@ -11,6 +12,13 @@ const PORT = process.env.PORT || 3000;
 
 // Enable CORS for all routes
 app.use(cors());
+app.use(express.json()); // ⬅️ Needed to parse JSON body
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'super-secret',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false } // true if using HTTPS
+}));
 
 // Initialize OpenAI API
 const openai = new OpenAI({
@@ -169,6 +177,50 @@ app.get("/analytics", async (req, res) => {
     const analytics = await analyzeComplaints(complaints.map((complaint=>complaint.complaintTitle)));
     res.json(analytics);
 });
+
+// Preload complaint context
+
+
+app.post('/chat', async (req, res) => {
+  try {
+    const prompt = req.body.prompt;
+
+    if (!prompt) {
+      return res.status(400).json({ error: 'Prompt is required' });
+    }
+    const complaints = getData();
+    const complaintContext = complaints.map(c => `- ${c.complaintTitle}`).join('\n');
+    // Initialize history if not present
+    if (!req.session.chatHistory) {
+      req.session.chatHistory = [
+        {
+          role: "system",
+          content: `You are a helpful policy maker analyzing gig worker complaints. These are the common issues:\n${complaintContext}`,
+        }
+      ];
+    }
+
+    // Add user's prompt
+    req.session.chatHistory.push({ role: "user", content: prompt });
+
+    // Call OpenAI
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4',
+      messages: req.session.chatHistory,
+    });
+
+    const reply = completion.choices[0].message.content;
+
+    // Add assistant response to session
+    req.session.chatHistory.push({ role: "assistant", content: reply });
+
+    res.json({ response: reply });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Something went wrong' });
+  }
+});
+
 
 // Start the server
 app.listen(PORT, () => {
