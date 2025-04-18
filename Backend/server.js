@@ -14,10 +14,10 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json()); // ⬅️ Needed to parse JSON body
 app.use(session({
-  secret: process.env.SESSION_SECRET || 'super-secret',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: false } // true if using HTTPS
+    secret: process.env.SESSION_SECRET || 'super-secret',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false } // true if using HTTPS
 }));
 
 // Initialize OpenAI API
@@ -28,7 +28,7 @@ const openai = new OpenAI({
 // Function to read data from data.json
 const getData = () => {
     try {
-        const data = fs.readFileSync("data.json", "utf8");
+        const data = fs.readFileSync("reddit-data.json", "utf8");
         return JSON.parse(data);
     } catch (error) {
         console.error("Error reading data.json:", error);
@@ -143,12 +143,16 @@ app.get("/complaints", (req, res) => {
 
 // API to get summarized complaints
 app.get("/summary", async (req, res) => {
-    const complaints = getData();
+    let data = getData();
+    let complaints = [...data]
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 50);
+
     if (complaints.length === 0) {
         return res.status(500).json({ error: "No complaints found." });
     }
 
-    const summary = await summarizeComplaints(complaints);
+    const summary = await summarizeComplaints(complaints.map((complaint => complaint.complaintTitle.split(":")[1])));
     res.json({ summary });
 });
 
@@ -162,19 +166,22 @@ app.get("/policy-suggestions", async (req, res) => {
     res.json({ summary });
 });
 
-app.get("/", (req,res)=>{
+app.get("/", (req, res) => {
     res.send("Server is working")
 })
 
 
 // API to get analytics (major concerns)
 app.get("/analytics", async (req, res) => {
-    const complaints = getData();
+    let data = getData();
+    let complaints = [...data]
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 50);
     if (complaints.length === 0) {
         return res.status(500).json({ error: "No complaints found." });
     }
 
-    const analytics = await analyzeComplaints(complaints.map((complaint=>complaint.complaintTitle)));
+    const analytics = await analyzeComplaints(complaints.map((complaint => complaint.complaintTitle.split(":")[1])));
     res.json(analytics);
 });
 
@@ -182,43 +189,49 @@ app.get("/analytics", async (req, res) => {
 
 
 app.post('/chat', async (req, res) => {
-  try {
-    const prompt = req.body.prompt;
+    try {
+        const prompt = req.body.prompt;
 
-    if (!prompt) {
-      return res.status(400).json({ error: 'Prompt is required' });
-    }
-    const complaints = getData();
-    const complaintContext = complaints.map(c => `- ${c.complaintTitle}`).join('\n');
-    // Initialize history if not present
-    if (!req.session.chatHistory) {
-      req.session.chatHistory = [
-        {
-          role: "system",
-          content: `You are a helpful policy maker analyzing gig worker complaints. These are the common issues:\n${complaintContext}`,
+        if (!prompt) {
+            return res.status(400).json({ error: 'Prompt is required' });
         }
-      ];
+        let data = getData();
+        let complaints = [...data]
+            .sort(() => 0.5 - Math.random())
+            .slice(0, 50);
+        let complaintContext = complaints.map(c => `- ${c.complaintTitle.split(":")[1]}`)
+        complaintContext = complaintContext.splice(29, complaints.length - 29).join(",")
+        console.log("complaintContext\n", complaintContext);
+
+        // Initialize history if not present
+        if (!req.session.chatHistory) {
+            req.session.chatHistory = [
+                {
+                    role: "system",
+                    content: `You are a helpful policy maker analyzing gig worker complaints. These are the common issues:\n${complaintContext}`,
+                }
+            ];
+        }
+
+        // Add user's prompt
+        req.session.chatHistory.push({ role: "user", content: prompt });
+
+        // Call OpenAI
+        const completion = await openai.chat.completions.create({
+            model: 'gpt-4',
+            messages: req.session.chatHistory,
+        });
+
+        const reply = completion.choices[0].message.content;
+
+        // Add assistant response to session
+        req.session.chatHistory.push({ role: "assistant", content: reply });
+
+        res.json({ response: reply });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Something went wrong' });
     }
-
-    // Add user's prompt
-    req.session.chatHistory.push({ role: "user", content: prompt });
-
-    // Call OpenAI
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-4',
-      messages: req.session.chatHistory,
-    });
-
-    const reply = completion.choices[0].message.content;
-
-    // Add assistant response to session
-    req.session.chatHistory.push({ role: "assistant", content: reply });
-
-    res.json({ response: reply });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Something went wrong' });
-  }
 });
 
 

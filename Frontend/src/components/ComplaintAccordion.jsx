@@ -31,7 +31,7 @@ const ComplaintAccordion = ({complaintsData}) => {
                 onClick={() => handleAccordionToggle(index)}
               >
                 <div>
-                  <h3 className="text-lg text-[#1b4965] font-bold">{complaint.complaintTitle}</h3>
+                  <h3 className="text-lg text-[#1b4965] font-bold line-clamp-1">{complaint.complaintTitle.split(":")[1]}</h3>
                   <p className="text-sm text-gray-500">
                     <strong>{complaint.name}</strong> | {complaint.date} | {complaint.location}
                   </p>

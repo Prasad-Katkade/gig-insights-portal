@@ -1,1 +1,1 @@
-export const API_URL="https://gig-insights-portal-api.onrender.com"
+export const API_URL="http://localhost:3000" //"https://gig-insights-portal-api.onrender.com"
